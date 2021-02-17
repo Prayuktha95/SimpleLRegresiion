@@ -17,3 +17,7 @@ plt.show
 
 print(linreg.coef_)
 print(linreg.intercept_)
+
+x_new = np.array([16]).reshape(-1,1)
+y_new = linreg.predict(x_new) 
+print(y_new)
