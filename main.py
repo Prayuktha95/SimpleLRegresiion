@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+
+xpoints = np.array([10, 11, 12, 13, 14, 15]).reshape(-1,1)
+ypoints = np.array([53, 52, 60, 63, 72, 70])
+
+linreg = LinearRegression()
+linreg.fit(xpoints, ypoints)
+
+y_pred = linreg.predict(xpoints)
+
+plt.scatter(xpoints, ypoints)
+plt.plot(xpoints, y_pred)
+plt.show
+
+print(linreg.coef_)
+print(linreg.intercept_)
